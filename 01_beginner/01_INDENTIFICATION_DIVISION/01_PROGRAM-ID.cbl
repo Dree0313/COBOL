@@ -1,147 +1,93 @@
 __________________________________________________________________________
-* Beginner C#: Variables
-Purpose: Learn how to store and use data in C# */
+* Beginner COBOL: IDENTIFICATION DIVISION & PROGRAM-ID
+* Purpose: Learn how COBOL programs are identified and named
 __________________________________________________________________________
 
-/* 
-Scenerio:
-  You are a junior C# developer at a company. Your application needs to 
-  store and work with employee information such as names, ages, salaries,
-  and employment status. */
+* Scenerio:
+  * You are a junior developer working on a legacy enterprise system. 
+  * Every COBOL program must be clearly identified so it can be compiled,
+  * executed, logged and maintained by large teams over many years
+
+__________________________________________________________________________ 
+* 1️ IDENTIFICATION DIVISION
+  * What it does: Identifies the program to the compiler and system
+  * Why use it: Required for every COBOL program
+  * Syntax: IDENTIFICATION DIVISION.
+__________________________________________________________________________
+* Problem: 
+  * Start a new COBOL program
+
+* Solution:
+  IDENTIFICATION DIVISION.
+
+* Explanation:
+  * IDENTIFICATION DIVISION tells the compiler:
+  * "This is the beginning of the program's identity information.
 
 __________________________________________________________________________
-/* 
-1️ Declaring Variables
-  What it does: Creates a named storage location for data
-  Why use it: Allows the program to remember values
-  Syntax: dataType variableName;*/
+* 2 PROGRAM-ID
+  * What it does: Assigns a unique name to the COBOL program
+  * Why use it: Used during compilation, execution, and debugging
+  * Syntax: PROGRAM-ID. program-name.
 __________________________________________________________________________
-/*
-Problem: 
-  Store an employee's age
+* Problem:
+  * Name the program EMPLOYEE-MANAGEMENT
 
-Solution: */
-  int age;
+* Solution:
+  PROGRAM-ID. EMPLOYEE-MANAGEMENT
 
-/* Explanation:
-  int = data type
-  age = variable name */
-
-__________________________________________________________________________
-/*
-2 Declaring and Initializing Variables
-  What it does: Creates a variable and assigns a value
-  Why use it: Most common way to work with data
-  Syntax: dataType variableName = value; */
-__________________________________________________________________________
-/*
-Problem:
-  Store an employee's first name
-
-Solution: */
-  string firstName = "Alice";
-
-/*
-Expected Result:
-  firstName contains "Alice"*/
+* Explanation:
+  * PROGRAM-ID is mandatory
+  *Program names are typically:
+    * - Uppercase
+    * - Hyphen-separated
+    * - Descriptive
 
 __________________________________________________________________________
-/*
-3 Common Primitive Data Types
-  What it does: Represents basic kinds of data
-  Why use it: Different data needs different types */
+* 3 Full IDENTIFICATION DIVISION Example
+  * What it does: Shows a complete valid identification section
+  * Why use it: Forms the official header of the program
 __________________________________________________________________________
-/*
-Examples: */
-  int employeeID = 101;
-  double salary = 75000.50;
-  bool isActive = true;
-  char grade = 'A';
+* Example:
+  IDENTIFICATION DIVISION.
+  PROGRAM-ID. EMPLOYEE-MANAGEMENT.
 
-/*
-Explanation:
-  int → while numbers
-  double → decimal numbers
-  bool → true / false
-  char → single character */
+* Explanation:
+  * The program is now correctly identified
+  * The compiler recognizes the program name
 
 __________________________________________________________________________
-/*
-4 Updating Variable Values
-  What it does: Changes the value stored in a variable
-  Why use it: Data often changes during program execution
-  Syntax: variableName = newValue; */
+* 4 Optional Documentation Fields (Awareness Level)
+  * What it does: Adds human-readable metadata
+  * Why use it: Helps teams maintain legacy code
 __________________________________________________________________________
-/*
-Problem:
-  The employee gets a raise
+* Example:
+  AUTHOR. ALEXANDRIA.
+  DATE-WRITTEN. 2026-02-02.
+  REMARKS. BASIC EMPLOYEE TRACKING PROGRAM.
 
-Solution: */
-  salary = 80000.00;
-
-/*
-Expected Result:
-  salary now contains 80000.00 */
-__________________________________________________________________________
-/*
-5 Using Variables in Output
-  What it does: Displays variable values
-  Why use it: Helps verify data and show results
-  Syntax: Console.WriteLine(...) */
-__________________________________________________________________________
-/*
-Problem:
-  Display employee's name and salary
-
-Solution: */
-  Console.WriteLine(firstName);
-  Console.WriteLine(salary);
-
-/*
-Expected Result: */
-  Alice
-  80000
+* Explanation:
+  * These fields are optional
+  * Often used in older enterprise environments
 
 __________________________________________________________________________
-/*
-6 String Interpolation
-  What it does: Inserts variable values into strings
-  Why use it: Cleaner and more readable output
-  Syntax: $"Text {variable}" */
+* 5 Relationship to Other Divisions
+  * What it does: Establishes program order
+  * Why use it: COBOL divisions must appear in sequence
 __________________________________________________________________________
-/*
-Problem:
-  Display a readable employee summary
+* Example:
+  IDENTIFICATION DIVISION.
+  DATA DIVISION.
+  PROCEDURE DIVISION.
 
-Solution: */
-  Console.WriteLine($"Employee: {firstName}, Salary: {salary}");
-
-/*
-Expected Result: */
-  Employee: Alice, Salary: 80000
-__________________________________________________________________________
-/*
-7 var Keyword (Type Inference)
-  What it does: Lets C# infer the variable type
-  Why use it: Reduces repetition when the type is obvious
-  Syntax: var variableName = value */
-__________________________________________________________________________
-/*
-Problem:
-  Store the department name without repeating the type
-
-Solution: */
-  var department = "HR";
-
-/*
-Explanation: 
-  C# infers department is a string
-  Type is still fixed at compile time */
+* Explanation:
+  * IDENTIFICAITON always comes first
+  * DATA defines storage
+  * PROCEDURE defines logic
 
 __________________________________________________________________________
-/*
-Key Rules to Remember
-  Variables must be declared before use
-  Variable types cannot change after declaration
-  Variable names should be descriptive
-  C# is strongly typed */
+* Key Rules to Remember
+  * IDENTIFICATION DIVISION is required
+  * PROGRAM-ID is manadatory
+  * Program names should be clear and descriptive
+  * COBOL programs are identified before logic begins
