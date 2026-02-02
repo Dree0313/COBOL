@@ -38,7 +38,7 @@ __________________________________________________________________________
 
 * Explanation:
   * PROGRAM-ID is mandatory
-  *Program names are typically:
+  * Program names are typically:
     * - Uppercase
     * - Hyphen-separated
     * - Descriptive
