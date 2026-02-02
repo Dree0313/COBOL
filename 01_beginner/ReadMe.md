@@ -17,7 +17,7 @@ At this stage, the emphasis is on:
 
 ### COBOL Program Structure
 - INDENTIFICATION DIVISION
-  - PROGRAM-ID
+  - [PROGRAM-ID](01_INDENTIFICATION_DIVISION/01_PROGRAM-ID.cbl)
 - DATA DIVISION
   - WORKING-STORAGE SECTION
   - FILE SECTION (intro level)
