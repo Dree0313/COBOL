@@ -3,7 +3,7 @@ __________________________________________________________________________
 * Purpose: Learn how COBOL programs are identified and named
 __________________________________________________________________________
 
-* Scenerio:
+*> Scenerio:
   * You are a junior developer working on a legacy enterprise system. 
   * Every COBOL program must be clearly identified so it can be compiled,
   * executed, logged and maintained by large teams over many years
